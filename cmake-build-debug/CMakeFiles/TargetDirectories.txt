@@ -1,3 +1,0 @@
-C:/Users/Gabriel Veres/Desktop/GOclient/cmake-build-debug/CMakeFiles/goclient.dir
-C:/Users/Gabriel Veres/Desktop/GOclient/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Gabriel Veres/Desktop/GOclient/cmake-build-debug/CMakeFiles/rebuild_cache.dir
