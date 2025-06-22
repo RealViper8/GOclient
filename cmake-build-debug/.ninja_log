@@ -1,0 +1,16 @@
+# ninja log v6
+895	1015	7722887618706060	C:/Users/Gabriel Veres/Desktop/GOclient/goclient.dll	b78e839fc1a413bd
+2	299	7722893496082030	C:/Users/Gabriel Veres/Desktop/GOclient/cmake-build-debug/cmake_install.cmake	f681b9e751092ad1
+2	299	7722893496121996	build.ninja	f681b9e751092ad1
+13	596	7722885332095721	CMakeFiles/goclient.dir/src/dllmain.cpp.obj	a843cf5e0e210b27
+895	1015	7722887618706060	goclient.lib	b78e839fc1a413bd
+62	180	7722829631219606	goclient.dll	47320e0252adb328
+20	563	7722893126986551	CMakeFiles/goclient.dir/entry/dllmain.cpp.obj	af1e75458049da0a
+15	306	7722893496121996	build.ninja	f681b9e751092ad1
+15	306	7722893496121996	C:/Users/Gabriel Veres/Desktop/GOclient/cmake-build-debug/cmake_install.cmake	f681b9e751092ad1
+18	564	7722893496847148	CMakeFiles/goclient.dir/src/client.cpp.obj	e6b89bd37b70e7b9
+565	669	7722893502319738	C:/Users/Gabriel Veres/Desktop/GOclient/goclient.dll	c30978d9bb007084
+565	669	7722893502319738	goclient.lib	c30978d9bb007084
+24	696	7722895685124208	CMakeFiles/goclient.dir/src/client.cpp.obj	e6b89bd37b70e7b9
+696	842	7722895691843238	C:/Users/Gabriel Veres/Desktop/GOclient/goclient.dll	c30978d9bb007084
+696	842	7722895691843238	goclient.lib	c30978d9bb007084
