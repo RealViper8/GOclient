@@ -1,40 +1,46 @@
 #include <client.h>
 
-Player::Player() {
-    
-}
-
-void Player::jump(JNIEnv* env) {
-
-}
-
-void PlayerJump(JNIEnv* env) {
+Player::Player(HMODULE hModule) {
     jclass minecraftClass = env->FindClass("fud");
     jmethodID getMinecraft = env->GetStaticMethodID(minecraftClass, "R", "()Lfud;");
     jobject mc = env->CallStaticObjectMethod(minecraftClass, getMinecraft);
-
+    
     jfieldID playerField = env->GetFieldID(minecraftClass, "t", "Lgwh;");
-    jobject player = env->GetObjectField(mc, playerField);
+    player = env->GetObjectField(mc, playerField);
+    
     if (player == NULL) {
-        std::cout << "Error: player is null musst schon ingame sein blud..." << std::endl;
+        while (player == NULL) {
+            std::cout << "\nError: player is null musst schon ingame sein blud..." << std::endl;
+            std::cout << "Versuche erneut in ";
 
-        std::cout << "Versuche erneut in ";
-        for (int x = 5; x > 0; x--) {
-            Sleep(1000);
-            std::cout << x;
+            if (GetAsyncKeyState(VK_END)) {
+                std::cout << "bye bye..." << std::endl;
+                FreeConsole();
+                FreeLibraryAndExitThread(hModule, 0);
+            }
+
+            for (int x = 5; x > 0; x--) {
+                std::cout << " " << x << "..";
+                Sleep(1000);
+            }
+    
+            std::cout << "..." << std::endl;
+            player = env->GetObjectField(mc, playerField);
         }
-        std::cout << std::endl;
-        return;
     }
 
-    jclass player_class = env->GetObjectClass(player);
+    player_class = env->GetObjectClass(player);
+}
+
+void Player::jump(JNIEnv* env) {
     jmethodID jumpMethod = env->GetMethodID(player_class, "s", "()V");
     env->CallVoidMethod(player, jumpMethod);
 }
 
 void client_main(HMODULE hModule) {
+    Player plr(hModule);
     while (true) {
-        PlayerJump(env);
+        plr.jump(env);
         Sleep(50);
 
         if (GetAsyncKeyState(VK_END)) {

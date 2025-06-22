@@ -11,10 +11,10 @@ extern JNIEnv* env;
 void client_main(HMODULE hModule);
 
 class Player {
-    Player();
-    static void jump(JNIEnv* env);
+public:
+    Player(HMODULE hModule);
+    void jump(JNIEnv* env);
 private:
     jobject player;
+    jclass player_class;
 };
-
-void PlayerJump(JNIEnv* env);

@@ -10,7 +10,6 @@ JNIEnv* env = NULL;
 FILE* pFile = nullptr;
 
 void init(HMODULE hModule) {
-    
     AllocConsole();
     freopen_s(&pFile, "CONOUT$", "w", stdout);
     std::cout << "GO Client has been injected !" << std::endl;
