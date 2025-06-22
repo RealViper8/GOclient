@@ -13,6 +13,7 @@ void client_main(HMODULE hModule);
 class Player {
 public:
     Player(HMODULE hModule);
+    ~Player();
     void jump(JNIEnv* env);
 private:
     jobject player;

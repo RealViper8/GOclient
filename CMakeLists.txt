@@ -10,6 +10,8 @@ set(SOURCES
 
     # Client entry
     src/client.cpp
+
+    include/modules.cpp
 )
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG ${CMAKE_SOURCE_DIR})
