@@ -4,6 +4,6 @@ A client thats about utilities lets you fly, and other feautres planned in the f
 
 ### Features
 - [X] Injection
-- [] Fly mod
-- [] BHop mod
-- [] Undetection mod
+- [ ] Fly mod
+- [ ] BHop mod
+- [ ] Undetection mod
